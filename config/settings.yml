@@ -1,0 +1,6 @@
+aws:
+  region: 'ap-south-1'
+  access_key: 'access_key'
+  secret_access_key: 'secret_access_key'
+  rtp_bucket: 'ot-rtp'
+  published_bucket: 'ot-published'
