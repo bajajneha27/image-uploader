@@ -1,13 +1,13 @@
 version: '3'
 services:
   image_uploader:
-    image: image_uploader
+    image: image_builder
     environment:
       RAILS_ENV: production
       RAILS_SERVE_STATIC_FILES: okay
       SECRET_KEY_BASE: 5eec5bc7f888c4286a83360c5ebe1ccfef2ae33701266b2b540251c743d63bc6f39bc05bdde4c76f3d08a5cf9f103d4d69e2f1c63311c08d841158f1ef6458c9
-    command: "./script/aws_watcher.rb start && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: bash -c "./script/aws_watcher.rb start && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/myapp
     ports:
-      - "80:3000"
+      - "3080:3000"

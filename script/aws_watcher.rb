@@ -10,4 +10,4 @@ options = {
   :monitor    => true
 }
 
-Daemons.run(File.join(File.dirname(__FILE__),'..','lib','aws_watcher.rb'), options)
+Daemons.run(File.join(File.dirname(__FILE__),'aws_watcher_daemon.rb'), options)
